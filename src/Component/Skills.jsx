@@ -60,7 +60,7 @@ function Skills() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-black">
-           My Skills 
+           My <u>Skills</u> 
           </h1>
 
           <p className="text-gray-600 mt-5 text-lg max-w-2xl mx-auto leading-8">
