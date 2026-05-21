@@ -20,8 +20,8 @@ function Navbar() {
     { name: "About", icon: <User size={18} /> },
     { name: "Skills", icon: <Brain size={18} /> },
     { name: "Projects", icon: <FolderGit2 size={18} /> },
-    { name: "Education", icon: <GraduationCap size={18} /> },
     { name: "Experience", icon: <BriefcaseBusiness size={18} /> },
+    { name: "Education", icon: <GraduationCap size={18} /> },
     { name: "Certificates", icon: <Award size={18} /> },
     { name: "Contact", icon: <Mail size={18} /> },
   ];

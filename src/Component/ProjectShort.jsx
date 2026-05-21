@@ -2,23 +2,14 @@ import React from "react";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import Project1 from "../assets/C_Mart.PNG";
+import Title from "./Title";
 
 function ProjectShort() {
   return (
     <>
       <section className="w-full px-4 md:px-8 lg:px-12 py-12">
-
-        <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-black">
-            My <span className="underline decoration-cyan-300">Projects</span>
-          </h1>
-
-          <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm md:text-lg">
-            A collection of projects showcasing my frontend and
-            full-stack development skills through real-world applications.
-          </p>
-        </div>
-
+       <Title title="Projects" description="A showcase of my technical abilities, where I combine tools, technologies, programming languages, 
+       third party API's, and problem-solving to build impactful real-world applications." />
         <div className="max-w-7xl mx-auto rounded-[32px] overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-2xl transition-all duration-500 group">
 
           <div className="relative bg-gray-100">
@@ -31,9 +22,9 @@ function ProjectShort() {
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </span>
 
-                <span className="text-green-700 font-medium text-sm">
+                <a href="https://chapati-mart.vercel.app/" className="text-green-700 font-medium text-sm cursor-pointer">
                   Live
-                </span>
+                </a>
               </div>
             </div>
 
@@ -50,7 +41,7 @@ function ProjectShort() {
           <div className="p-6 md:p-8 lg:p-10">
 
             <p className="uppercase tracking-[2px] text-cyan-500 text-sm font-medium mb-3">
-              Daily Essential E-Commerce Platform
+              Daily Essential Online Order Platform
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
@@ -64,7 +55,7 @@ function ProjectShort() {
             </p>
 
             <div className="flex flex-wrap gap-3 mt-8 cursor-pointer">
-              {["HTML","Tailwind CSS","React JS", "Java","Spring-Boot", "MySQL"].map(
+              {["HTML","Tailwind CSS","React JS", "Java","Spring-Boot", "Aiven MySQL","RazorPay"].map(
                 (tech, index) => (
                   <span
                     key={index}
@@ -80,15 +71,15 @@ function ProjectShort() {
 
               <div className="flex flex-wrap gap-4">
 
-                <button className="bg-black cursor-pointer text-white px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-cyan-300 hover:text-black transition duration-300">
+                <a href="https://chapati-mart.vercel.app/" className="bg-black cursor-pointer text-white px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-cyan-300 hover:text-black transition duration-300">
                   <ExternalLink size={18} />
                   Live Demo
-                </button>
+                </a>
 
-                <button className="border border-gray-300 cursor-pointer px-6 py-3 rounded-2xl flex items-center gap-2 text-black hover:bg-cyan-300 transition duration-300">
+                <a href="https://github.com/7498924522/ChapatiMart" className="border border-gray-300 cursor-pointer px-6 py-3 rounded-2xl flex items-center gap-2 text-black hover:bg-cyan-300 transition duration-300">
                   <FaGithub size={18} />
                   GitHub
-                </button>
+                </a>
               </div>
 
               <button className="text-cyan-500 cursor-pointer hover:text-cyan-700 flex items-center gap-2 text-lg font-medium transition duration-300">

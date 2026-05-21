@@ -39,7 +39,7 @@ function Summary() {
             <h2 className="mt-4 text-lg sm:text-2xl lg:text-3xl text-gray-700 font-semibold leading-relaxed">
               Java Full Stack Developer <br className="sm:hidden" />
               <span className="hidden sm:inline"> | </span>
-              React Developer
+              Front-End Developer
             </h2>
 
             <p className="mt-6 text-gray-600 text-base sm:text-lg leading-8 max-w-xl mx-auto md:mx-0">
