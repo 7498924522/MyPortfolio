@@ -54,7 +54,7 @@ function ProjectShort() {
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              ChapatiMart
+              ChapatiMart <br className="sm:hidden" />(E-Commerce)
             </h2>
 
             <p className="text-gray-600 leading-8 text-base md:text-lg">

@@ -1,12 +1,12 @@
 import React from "react";
 import {FaReact,FaHtml5,FaCss3Alt,FaJs,FaJava,FaGitAlt,FaGithub,FaDatabase,} from "react-icons/fa";
-import {SiTailwindcss,SiMysql,SiPostman,SiRender,SiVercel} from "react-icons/si";
+import {SiTailwindcss,SiMysql,SiPostman,SiRender,SiVercel, SiDocker, SiRazorpay, SiTwilio} from "react-icons/si";
 import {Code2,Database,Wrench,Server} from "lucide-react";
 
 function Skills() {
   const skills = [
     {
-      title: "Frontend Development",
+      title: "Frontend Development (UI)",
       icon: <Code2 size={35} />,
       desc: "Building responsive, interactive, and user-friendly web interfaces with modern technologies.",
       tech: [
@@ -42,13 +42,16 @@ function Skills() {
     {
       title: "Tools & Platforms",
       icon: <Wrench size={35} />,
-      desc: "Using professional tools for version control, deployment, and API testing.",
+      desc: "Using professional tools for version control, deployment, and API testing.And third party API keys",
       tech: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
         { name: "Postman", icon: <SiPostman /> },
         { name: "Render", icon: <SiRender /> },
         { name: "Vercel", icon: <SiVercel /> },
+        { name: "Docker", icon: <SiDocker /> },
+        { name: "Razorpay", icon: <SiRazorpay /> },
+        { name: "Twilio", icon: <SiTwilio /> }
       ],
     },
   ];
@@ -60,7 +63,7 @@ function Skills() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-black">
-           My <u>Skills</u> 
+           My <u className="underline decoration-cyan-300">Skills</u> 
           </h1>
 
           <p className="text-gray-600 mt-5 text-lg max-w-2xl mx-auto leading-8">

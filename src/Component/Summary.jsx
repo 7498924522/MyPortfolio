@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Download, ArrowRight,Eye } from 'lucide-react'
-import profile_Photo from '../assets/rrr.jpeg'
+import profile_Photo from '../assets/pro.png'
 function Summary() {
   return (
     <section className="min-h-screen bg-white flex items-center pt-28 pb-16 px-5 sm:px-8 md:px-14 lg:px-20">
