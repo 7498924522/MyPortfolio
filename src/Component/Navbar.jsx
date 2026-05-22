@@ -11,6 +11,7 @@ import {
   Award,
   Mail,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);

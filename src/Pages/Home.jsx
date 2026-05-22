@@ -3,6 +3,7 @@ import Navbar from '../Component/Navbar'
 import Summary from '../Component/Summary'
 import ProjectShort from '../Component/ProjectShort'
 import Skills from '../Component/Skills'
+import Experience from '../Component/Experience'
 
 function Home() {
   return (
@@ -18,6 +19,9 @@ function Home() {
 
     {/* Project Section */}
     <ProjectShort/>
+    
+    {/* Experince Section */}
+    <Experience/>
     </>
   )
 }

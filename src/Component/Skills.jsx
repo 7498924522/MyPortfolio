@@ -1,7 +1,7 @@
 import React from "react";
 import {FaReact,FaHtml5,FaCss3Alt,FaJs,FaJava,FaGitAlt,FaGithub,FaDatabase,} from "react-icons/fa";
 import {SiTailwindcss,SiMysql,SiPostman,SiRender,SiVercel, SiDocker, SiRazorpay, SiTwilio, SiH2Database} from "react-icons/si";
-import {Code2,Database,Wrench,Server} from "lucide-react";
+import {Code2,Database,Wrench,Server, Brain} from "lucide-react";
 import Title from "./Title";
 
 function Skills() {
@@ -61,7 +61,7 @@ function Skills() {
   return (
     <section className=" py 8 md:py-10 px-6 md:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
-        <Title title="Skills"  description="Tools & Technologies I use to build responsive, scalable, and real-world web applications
+        <Title icon={<Brain size={40}/>} title="Skills"  description="Tools & Technologies I use to build responsive, scalable, and real-world web applications
         by collaborating multiple layes behind the scene." />
         {/* Skill Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">

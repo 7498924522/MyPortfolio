@@ -1,18 +1,19 @@
 import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-// import Navbar from './Component/Navbar'
-// import Summary from './Component/Summary'
-// import Skills from './Component/Skills'
-// import ProjectShort from './Component/ProjectShort';
 import Home from './Pages/Home';
+import ProjectDetailed from './Component/ProjectDetailed';
 function App() {
  
 
   return (
     <>
-     <Home />
+      <Routes>
+       <Route path="/" element={<Home />} />
+       <Route path="/projects" element={<ProjectDetailed />}/>
+      </Routes>
     </>
   )
 }
