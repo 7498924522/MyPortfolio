@@ -4,6 +4,7 @@ import Summary from '../Component/Summary'
 import ProjectShort from '../Component/ProjectShort'
 import Skills from '../Component/Skills'
 import Experience from '../Component/Experience'
+import Education from '../Component/Education'
 
 function Home() {
   return (
@@ -22,6 +23,9 @@ function Home() {
     
     {/* Experince Section */}
     <Experience/>
+
+    {/* Education Section */}
+    <Education/>
     </>
   )
 }
