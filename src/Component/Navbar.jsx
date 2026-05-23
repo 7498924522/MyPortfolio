@@ -18,7 +18,7 @@ function Navbar() {
 
   const navItems = [
     { name: "Home", icon: <House size={18} /> },
-    { name: "About", icon: <User size={18} /> },
+    // { name: "About", icon: <User size={18} /> },
     { name: "Skills", icon: <Brain size={18} /> },
     { name: "Projects", icon: <FolderGit2 size={18} /> },
     { name: "Experience", icon: <BriefcaseBusiness size={18} /> },
@@ -38,7 +38,7 @@ function Navbar() {
           </h1>
 
           {/* Desktop Menu When Normal Screen*/}
-          <ul className="hidden md:flex items-center gap-10 text-black font-medium">
+          <ul className="hidden md:flex items-center gap-16 text-black font-medium">
             {navItems.map((item, index) => (
               <li
                 key={index}

@@ -19,7 +19,7 @@ function Summary() {
               <img
                 src={profile_Photo}
                 alt="Rahul Rathod"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-[center_30%]"
               />
             </div>
           </div>

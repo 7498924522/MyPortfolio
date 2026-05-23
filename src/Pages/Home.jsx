@@ -5,6 +5,8 @@ import ProjectShort from '../Component/ProjectShort'
 import Skills from '../Component/Skills'
 import Experience from '../Component/Experience'
 import Education from '../Component/Education'
+import Certificates from '../Component/Certificates'
+import Footer from '../Component/Footer'
 
 function Home() {
   return (
@@ -26,6 +28,12 @@ function Home() {
 
     {/* Education Section */}
     <Education/>
+
+    {/* Certification  Section */}
+    <Certificates/>
+
+      {/*Footer  Section */}
+    <Footer/>
     </>
   )
 }

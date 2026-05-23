@@ -37,7 +37,7 @@ function Education() {
         description="My academic journey, achievements, and continuous learning path in technology and software development."
       />
 
-      <div className="max-w-6xl mx-auto mt-12 space-y-8">
+      <div className="max-w-6xl mx-auto space-y-8">
 
         {educationData.map((edu, index) => (
           <div
@@ -71,7 +71,7 @@ function Education() {
                 href={edu.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-2 py-1 rounded-xl border border-gray-300 text-black hover:bg-cyan-300 transition duration-300 h-fit"
+                className="flex items-center w-40 gap-2 px-2 py-1 rounded-xl border border-gray-300 text-black hover:bg-cyan-300 transition duration-300 h-fit"
               >
                 <Eye size={20} />
                 View Marksheet
