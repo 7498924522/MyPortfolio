@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import {Mail, Phone,MapPin,ArrowUpRight,} from "lucide-react";
+import { SiLeetcode } from "react-icons/si";
 
 function Footer() {
   return (
@@ -88,7 +89,7 @@ function Footer() {
             <div className="flex gap-4">
 
               <a
-                href="YOUR_GITHUB_LINK"
+                href="https://github.com/7498924522"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-2xl border border-zinc-700 flex items-center justify-center hover:bg-cyan-300 hover:text-black transition duration-300"
@@ -97,7 +98,7 @@ function Footer() {
               </a>
 
               <a
-                href="YOUR_LINKEDIN_LINK"
+                href="https://www.linkedin.com/in/rathod-rrr9/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-14 h-14 rounded-2xl border border-zinc-700 flex items-center justify-center hover:bg-cyan-300 hover:text-black transition duration-300"
@@ -106,10 +107,10 @@ function Footer() {
               </a>
 
               <a
-                href="rrathod7602@gmail.com"
+                href="https://leetcode.com/u/Rocks_777/"
                 className="w-14 h-14 rounded-2xl border border-zinc-700 flex items-center justify-center hover:bg-cyan-300 hover:text-black transition duration-300"
               >
-                <ArrowUpRight size={22} />
+                <SiLeetcode size={22} />
               </a>
 
             </div>

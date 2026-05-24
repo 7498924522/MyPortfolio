@@ -24,7 +24,7 @@ function Navbar() {
     { name: "Experience", icon: <BriefcaseBusiness size={18} /> },
     { name: "Education", icon: <GraduationCap size={18} /> },
     { name: "Certificates", icon: <Award size={18} /> },
-    { name: "Contact", icon: <Mail size={18} /> },
+    { name: "Contact Me", icon: <Mail size={18} /> },
   ];
 
   return (
