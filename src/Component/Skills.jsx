@@ -91,7 +91,7 @@ function Skills() {
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-3 mt-5">
+              <div className="flex flex-wrap gap-3 mt-6">
                 {skill.tech.map((tech, i) => (
                   <div
                     key={i}
@@ -101,7 +101,7 @@ function Skills() {
                     rounded-full
                     bg-gray-100
                     text-gray-700
-                    hover:bg-cyan-200
+                    hover:bg-cyan-300
                     hover:text-black
                     transition duration-300
                     cursor-pointer"
