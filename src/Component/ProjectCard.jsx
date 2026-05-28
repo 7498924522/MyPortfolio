@@ -1,6 +1,7 @@
 import React from "react";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function ProjectCard({
   image,
@@ -11,6 +12,7 @@ function ProjectCard({
   liveLink,
   githubLink,
 }) {
+  const navigate=useNavigate();
   return (
     <div className="max-w-7xl mx-auto rounded-[32px] overflow-hidden border border-gray-200 bg-white shadow-md hover:shadow-2xl transition-all duration-500 group">
 
@@ -95,7 +97,7 @@ function ProjectCard({
             </a>
           </div>
 
-          <button className="text-cyan-500 cursor-pointer hover:text-cyan-700 flex items-center gap-2 text-lg font-medium transition duration-300">
+          <button onClick={()=> navigate("/projects")} className="text-cyan-500 cursor-pointer hover:text-cyan-700 flex items-center gap-2 text-lg font-medium transition duration-300">
             View Details
             <ArrowRight size={20} />
           </button>

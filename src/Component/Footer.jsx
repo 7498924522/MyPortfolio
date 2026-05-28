@@ -3,7 +3,48 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import {Mail, Phone,MapPin,ArrowUpRight,} from "lucide-react";
 import { SiLeetcode } from "react-icons/si";
 
-function Footer() {
+function Footer(
+  {
+    
+  scrollToSection,
+  summaryRef,
+  skillRef,
+  projectRef,
+  experienceRef,
+  educationRef,
+  certificatesRef,
+  
+
+  
+  }
+) {
+  
+  const footerLinks = [
+    {
+      name: "Summary",
+      ref: summaryRef,
+    },
+    {
+      name: "Skills",
+      ref: skillRef,
+    },
+    {
+      name: "Projects",
+      ref: projectRef,
+    },
+    {
+      name: "Experience",
+      ref: experienceRef,
+    },
+    {
+      name: "Education",
+      ref: educationRef,
+    },
+    {
+      name: "Certificates",
+      ref: certificatesRef,
+    },
+  ];
   return (
     <footer className="bg-zinc-950 text-white mt-20">
 
@@ -37,15 +78,15 @@ function Footer() {
 
             <ul className="space-y-4 text-gray-400  md:grid grid grid-cols-2 md:grid-cols-1">
 
-              {[
-                 "About", "Skills","Projects", "Experience", "Education","Certificates",
-                
-              ].map((item, index) => (
+              {footerLinks.map((item, index) => (
                 <li
                   key={index}
+                  onClick={() =>
+              scrollToSection(item.ref)
+            }
                   className="hover:text-cyan-300 cursor-pointer transition duration-300"
                 >
-                  {item}
+                  {item.name}
                 </li>
               ))}
 

@@ -1,42 +1,34 @@
 import React, { useState } from "react";
 import {
-  ArrowLeft,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  FolderGit2,
-  GitBranch,
-  Lightbulb,
-  Target,
-  Workflow,
+  ArrowLeft,ChevronDown,ChevronUp,
+  ExternalLink,FolderGit2,
+  GitBranch,Lightbulb,
+  Target,Workflow,
 } from "lucide-react";
 
 import {
-  FaGithub,
-  FaReact,
-  FaStore,
-  FaHtml5,
-  FaJava,
-  FaDatabase,
+  FaGithub,FaReact,FaStore,
+  FaHtml5,FaJava,FaDatabase,
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss,
-  SiJavascript,
-  SiVercel,
-  SiMysql,
-  SiPostman,
-  SiRender,
-  SiDocker,
-  SiRazorpay,
-  SiTwilio,
-  SiSpring,
-  SiHtml5,
+  SiTailwindcss,SiJavascript, SiVercel,
+  SiMysql,SiPostman,SiRender,SiDocker,
+  SiRazorpay, SiTwilio,SiSpring,SiHtml5,
 } from "react-icons/si";
 
-import CPU_Image from "../assets/cpuscheduling.PNG";
+// Project Images
+import CPU_Image from "../assets/CPP.PNG";
 import ChapatiMart_Image from "../assets/C_Mart.PNG";
+import Number_System from "../assets/NSS.PNG";
+import G_G from "../assets/GG.PNG";
+
+// PopUp Images CICD and WorkFlow
 import CI_CD from "../assets/CI&CD.png";
+import CPU_FLOW from "../assets/cpuFlow.png";
+import ChapatiWorkflow from "../assets/C_Mart_Flow.png";
+import Conversion_Flow from "../assets/ConversionFlow.png";
+import Invoice_Work_Flow from "../assets/Invoice_Flow.png";
 
 function ProjectCard({
   image,
@@ -47,9 +39,19 @@ function ProjectCard({
   accordionItems,
   liveLink,
   githubLink,
+  workflowImage,
+  cicdImage,
 }) {
   const [openAcc, setOpenAcc] = useState(null);
   const [popup, setPopup] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+  const [popupTitle, setPopupTitle] = useState("");
+
+  const handlePopup = (image, title) => {
+    setSelectedImage(image);
+    setPopupTitle(title);
+    setPopup(true);
+  };
 
   return (
     <div className="bg-white rounded-[30px] border shadow-md overflow-hidden mb-10">
@@ -66,9 +68,9 @@ function ProjectCard({
           </a>
         </div>
 
-        {title == "ChapatiMart" && (
+        {cicdImage && (
           <button
-            onClick={() => setPopup(true)}
+            onClick={() => handlePopup(cicdImage, `${title} CI & CD`)}
             className="absolute md:bottom-4 bottom-0.5 right-5 bg-black text-white px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-cyan-500 transition"
           >
             <GitBranch size={18} />
@@ -76,7 +78,10 @@ function ProjectCard({
           </button>
         )}
 
-        <button className="absolute md:bottom-4 bottom-0.5 left-5 bg-black text-white px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-cyan-500 transition">
+        <button
+          onClick={() => handlePopup(workflowImage, `${title} Workflow`)}
+          className="absolute md:bottom-4 bottom-0.5 left-5 bg-black text-white px-2 md:px-4 md:py-1 py-0.5 md:mt-0 mt-2 rounded-xl flex items-center gap-2 hover:bg-cyan-500 transition"
+        >
           <Workflow size={18} />
           Workflow
         </button>
@@ -184,10 +189,7 @@ function ProjectCard({
             <div className="flex items-center justify-between border-b px-5 md:px-8 py-4 bg-gray-50">
               <div>
                 <h2 className="text-xl md:text-3xl font-bold text-black">
-                  Project CI&CD <br />
-                  <u className=" md:text-3xl text-sm">
-                    (Contineus Integration And Contineus Deployment)
-                  </u>
+                  {popupTitle}
                 </h2>
 
                 <p className="text-gray-500 text-sm md:text-base mt-1">
@@ -206,7 +208,7 @@ function ProjectCard({
             <div className="p-4 md:p-8 max-h-[75vh] overflow-y-auto">
               <div className="rounded-3xl overflow-hidden border bg-gray-100 flex justify-center items-center p-3 md:p-6">
                 <img
-                  src={CI_CD}
+                  src={selectedImage}
                   alt="Project Architecture"
                   className="w-full h-auto object-contain rounded-2xl"
                 />
@@ -249,6 +251,8 @@ function ProjectDetailed() {
         {/* ChapatiMart */}
         <ProjectCard
           image={ChapatiMart_Image}
+          workflowImage={ChapatiWorkflow}
+          cicdImage={CI_CD}
           category="Real World E-Commerce Platform"
           title="ChapatiMart"
           description="Built for my relatives shop in Mumbai inspired by Zepto and Zomato for online daily essentials ordering."
@@ -288,9 +292,11 @@ function ProjectDetailed() {
         {/* CPU Scheduling */}
         <ProjectCard
           image={CPU_Image}
+          workflowImage={CPU_FLOW}
           category="Operating System Learning Platform"
           title="CPU Scheduling Algorithm Visualizer"
           description="An interactive educational platform built to simplify complex CPU Scheduling Algorithms through real-time Gantt chart visualization, waiting time, and turnaround time calculations. Inspired by my own learning challenges in Operating Systems, I approached our HOD to explore using this application in classroom projector-based teaching for better student understanding and engagement."
+          liveLink="https://chapati-mart.vercel.app/"
           githubLink="https://github.com/7498924522/Scheduling-algorithm-app"
           techStack={[
             { name: "HTML", icon: FaHtml5 },
@@ -312,6 +318,75 @@ function ProjectDetailed() {
               label: "What Problem It Solves ?",
               content:
                 "Helps students visualize CPU scheduling execution through Gantt charts and calculations.Helped students easily understand exam-focused CPU Scheduling concepts, which are fixed topics in end-semester exams and can contribute significantly to scoring (6 marks).Key point is i solved round-robin algorithm with (Quantum Time:- 3) when i attended my 4th SEM .",
+            },
+          ]}
+        />
+
+        {/* Number system Conversion Hub */}
+        <ProjectCard
+          image={Number_System}
+          workflowImage={Conversion_Flow}
+          category="Digital Electronics Learning Platform"
+          title="Number System Conversion Hub"
+          liveLink="https://number-system-conversion-qobn.vercel.app/home"
+          description="An interactive educational platform designed to simplify Number System conversions (Decimal, Binary, Octal, Hexadecimal) through step-by-step calculations and visual learning. Built to help students and teachers better understand complex conversion logic in classroom teaching."
+          githubLink="https://github.com/7498924522/NumberSystemConversion"
+          techStack={[
+            { name: "HTML", icon: FaHtml5 },
+            { name: "React JS", icon: FaReact },
+            { name: "Tailwind CSS", icon: SiTailwindcss },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "localStorage", icon: FaStore },
+            { name: "Vercel", icon: SiVercel },
+          ]}
+          accordionItems={[
+            {
+              icon: <Lightbulb size={18} />,
+              label: "Why I Built This ?",
+              content:
+                "During my 2nd year (3SEM), Number System Conversion felt abstract, so I built an interactive visualizer across all number system even vice-verca.",
+            },
+            {
+              icon: <Target size={18} />,
+              label: "What Problem It Solves ?",
+              content:
+                "Solves the difficulty students face while understanding Number System conversions by providing step-by-step calculations between Decimal, Binary, Octal, and Hexadecimal formats. It eliminates confusion in manual conversion methods and helps teachers explain concepts more effectively during classroom sessions.",
+            },
+          ]}
+        />
+
+        {/* Automated Invoice & Billing System */}
+        <ProjectCard
+          image={G_G}
+          workflowImage={Invoice_Work_Flow}
+          category="Automation"
+          title="Automated Invoice & Billing System"
+          description="Developed a dynamic billing system for a real-life retail shop  to simplify daily 
+          billing operations and improve efficiency. The system supports real-time price calculation for multiple items, 
+          persistent bill storage using LocalStorage, print-ready invoices, and a clean responsive UI for smooth usability.
+          And also i have added this into E-Commerce application for invoice along with order package."
+          liveLink="https://billing-page-theta.vercel.app/"
+          githubLink="https://github.com/7498924522/Billing_Page"
+          techStack={[
+            { name: "HTML", icon: FaHtml5 },
+            { name: "React JS", icon: FaReact },
+            { name: "Tailwind CSS", icon: SiTailwindcss },
+            { name: "JavaScript", icon: SiJavascript },
+            { name: "localStorage", icon: FaStore },
+            { name: "Vercel", icon: SiVercel },
+          ]}
+          accordionItems={[
+            {
+              icon: <Lightbulb size={18} />,
+              label: "Why I Built This ?",
+              content:
+                "I built this project after observing a real problem in my relative’s retail shop, where daily billing and total calculations were handled manually in notebooks, often causing delays and calculation errors. Realizing the opportunity to simplify this process through technology, I developed a smart billing system to automate calculations, improve efficiency, and reduce manual effort in day-to-day shop operations.",
+            },
+            {
+              icon: <Target size={18} />,
+              label: "What Problem It Solves ?",
+              content:
+                "Solves the problem of manual billing and total calculation in retail shops by selecting product, where maintaining records in notebooks can lead to calculation mistakes, time consumption, and inefficiency.",
             },
           ]}
         />

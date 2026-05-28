@@ -13,8 +13,29 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar(
+  {
+  scrollToSection,
+  summaryRef,
+  skillRef,
+  projectRef,
+  experienceRef,
+  educationRef,
+  certificatesRef,
+  footerRef
+
+  }
+) {
   const [openMenu, setOpenMenu] = useState(false);
+  const sectionRefs = {
+  Summary:summaryRef,
+  Skills: skillRef,
+  Projects: projectRef,
+  Experience:experienceRef,
+  Education:educationRef,
+  Certificates:certificatesRef,
+  Contact_Me:footerRef
+};
 
   const navItems = [
     { name: "Home", icon: <House size={18} /> },
@@ -24,7 +45,7 @@ function Navbar() {
     { name: "Experience", icon: <BriefcaseBusiness size={18} /> },
     { name: "Education", icon: <GraduationCap size={18} /> },
     { name: "Certificates", icon: <Award size={18} /> },
-    { name: "Contact Me", icon: <Mail size={18} /> },
+    { name: "Contact_Me", icon: <Mail size={18} /> },
   ];
 
   return (
@@ -42,6 +63,9 @@ function Navbar() {
             {navItems.map((item, index) => (
               <li
                 key={index}
+                onClick={() => {
+             const ref = sectionRefs[item.name];
+            if (ref) {scrollToSection(ref);}}}
                 className="group cursor-pointer flex items-center gap-2 hover:text-cyan-400 transition duration-300"
               >
                 {item.icon}
@@ -87,6 +111,9 @@ function Navbar() {
               {navItems.map((item, index) => (
                 <li
                   key={index}
+                    onClick={() => {
+                  const ref = sectionRefs[item.name];
+                  if (ref) {scrollToSection(ref);}}}
                   className="flex items-center gap-3 text-black text-lg hover:bg-cyan-500/20 hover:text-cyan-400 px-4 py-3 rounded-xl transition duration-300 cursor-pointer"
                 >
                   {item.icon}
