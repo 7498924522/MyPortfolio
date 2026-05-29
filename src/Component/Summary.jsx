@@ -2,7 +2,9 @@ import React from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Download, ArrowRight,Eye } from 'lucide-react'
 import profile_Photo from '../assets/pro.png'
+import { useNavigate } from 'react-router-dom'
 function Summary() {
+  const navigate=useNavigate();
   return (
     <section className="min-h-screen bg-white flex items-center pt-28 pb-16 px-5 sm:px-8 md:px-14 lg:px-20">
       <div className="max-w-7xl mx-auto w-full">
@@ -49,7 +51,7 @@ function Summary() {
 
             {/* Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-              <button className="flex items-center gap-2 bg-black text-white px-7 py-3 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300 shadow-md">
+              <button onClick={()=> navigate("/projects")} className="flex items-center gap-2 bg-black text-white px-7 py-3 rounded-xl hover:bg-cyan-300 hover:text-black transition duration-300 shadow-md">
                 View Projects
                 <ArrowRight size={18} />
               </button>

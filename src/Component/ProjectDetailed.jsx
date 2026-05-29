@@ -56,12 +56,12 @@ function ProjectCard({
   return (
     <div className="bg-white rounded-[30px] border shadow-md overflow-hidden mb-10">
       <div className="relative bg-gray-100">
-        <div className="absolute top-5 right-5 z-10">
+        <div className="absolute md:top-5 top-0.5 right-3 z-10">
           <a
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium shadow flex items-center gap-2"
+            className="bg-green-100 text-green-700  md:px-4 px-2 md:py-1 py-0 rounded-full text-sm font-medium shadow flex items-center gap-2"
           >
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
             Live
@@ -71,7 +71,7 @@ function ProjectCard({
         {cicdImage && (
           <button
             onClick={() => handlePopup(cicdImage, `${title} CI & CD`)}
-            className="absolute md:bottom-4 bottom-0.5 right-5 bg-black text-white px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-cyan-500 transition"
+            className="absolute md:bottom-4 bottom-0.5 right-5 bg-black text-white px-2 md:px-4 md:py-1 py-0.5 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-500 transition"
           >
             <GitBranch size={18} />
             CI & CD
@@ -80,7 +80,7 @@ function ProjectCard({
 
         <button
           onClick={() => handlePopup(workflowImage, `${title} Workflow`)}
-          className="absolute md:bottom-4 bottom-0.5 left-5 bg-black text-white px-2 md:px-4 md:py-1 py-0.5 md:mt-0 mt-2 rounded-xl flex items-center gap-2 hover:bg-cyan-500 transition"
+          className="absolute md:bottom-4 bottom-0 left-5 bg-black text-white px-2 md:px-4 md:py-1 py-0 md:mt-0 mt-4 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-500 transition"
         >
           <Workflow size={18} />
           Workflow
@@ -164,7 +164,7 @@ function ProjectCard({
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-cyan-500 transition"
+            className="bg-black text-white md:px-6 px-4 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-500 transition"
           >
             <ExternalLink size={18} />
             Live Demo
@@ -174,7 +174,7 @@ function ProjectCard({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="border px-6 py-3 rounded-2xl flex items-center gap-2 hover:bg-black hover:text-white transition"
+            className="border md:px-6 px-4 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-black hover:text-white transition"
           >
             <FaGithub size={18} />
             GitHub
@@ -227,10 +227,10 @@ function ProjectDetailed() {
       <div className="bg-white px-6 md:px-12 pt-4 flex items-center gap-4">
         <button
           onClick={() => window.history.back()}
-          className="flex items-center gap-2 border rounded-xl px-4 py-1 hover:bg-black hover:text-white transition"
+          className="flex items-center  rounded-md px-4 py-1 hover:bg-black hover:text-white transition"
         >
           <ArrowLeft size={18} />
-          Back
+         
         </button>
 
         <div className="flex items-center gap-3">

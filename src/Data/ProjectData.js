@@ -1,4 +1,4 @@
-import Project_1 from "../assets/cpuscheduling.PNG"
+import Project_1 from "../assets/CPP.PNG"
 import Project_2 from "../assets/C_Mart.PNG";
 export const projects = [
   {
@@ -25,13 +25,19 @@ export const projects = [
     description:
       "Approached and developed a real-world online ordering platform for my relatives’ shop in Mumbai, inspired by Zepto and Zomato with Customer, Admin, and Delivery Boy systems.",
     technologies: [
-      "HTML",
-      "Tailwind CSS",
-      "React JS",
-      "Java",
-      "Spring-Boot",
-      "Aiven MySQL",
-      "RazorPay",
+       "HTML", 
+        "Tailwind CSS",
+        "React JS", 
+         "JS", 
+         "Java", 
+          "Spring-Boot",
+          "MySQL", 
+         "Aiven MySQL", 
+          "Docker", 
+           "Render", 
+            "Vercel", 
+            "Razorpay",
+           "Postman", 
     ],
     liveLink: "https://chapati-mart.vercel.app/",
     githubLink: "https://github.com/7498924522/ChapatiMart",
