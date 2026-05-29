@@ -164,7 +164,7 @@ function ProjectCard({
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-black text-white md:px-6 px-4 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-500 transition"
+            className="bg-black text-white px-6 py-3  md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-500 transition"
           >
             <ExternalLink size={18} />
             Live Demo
@@ -174,7 +174,7 @@ function ProjectCard({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="border md:px-6 px-4 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-black hover:text-white transition"
+            className="border px-6  py-3  md:rounded-xl rounded-md flex items-center gap-2 hover:bg-black hover:text-white transition"
           >
             <FaGithub size={18} />
             GitHub

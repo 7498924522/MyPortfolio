@@ -19,7 +19,7 @@ function ProjectCard({
       <div className="relative bg-gray-100">
 
         <div className="absolute md:top-5 top-0.5 right-5 z-20">
-          <div className="inline-flex items-center gap-2 md:px-4 px-2 md:py-2 py-0 rounded-full bg-white/90 backdrop-blur-md border border-green-200 shadow-md">
+          <div className="inline-flex items-center md:gap-2 md:px-4 px-1 md:py-2 py-0 rounded-full bg-white/90 backdrop-blur-md border border-green-200 shadow-md">
 
             <span className="relative flex h-3 w-3 items-center">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -80,7 +80,7 @@ function ProjectCard({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black cursor-pointer text-white md:px-6 px-4 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-300 hover:text-black transition duration-300"
+              className="bg-black cursor-pointer text-white px-6  py-3 md:rounded-xl rounded-md flex items-center gap-2 hover:bg-cyan-300 hover:text-black transition duration-300"
             >
               <ExternalLink size={18} />
               Live Demo
@@ -90,7 +90,7 @@ function ProjectCard({
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gray-300 cursor-pointer px-6 md:py-3 sm:py-2 md:rounded-xl rounded-md flex items-center gap-2 text-black hover:bg-cyan-300 transition duration-300"
+              className="border border-gray-300 cursor-pointer px-6 py-3 md:rounded-xl rounded-md flex items-center gap-2 text-black hover:bg-cyan-300 transition duration-300"
             >
               <FaGithub size={18} />
               GitHub
